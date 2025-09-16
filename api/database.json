@@ -1,0 +1,47 @@
+{
+    "serviceEvent": [
+    {
+      "id": 1,
+      "type": "call"
+    },
+    {
+      "id": 2,
+      "type": "research"
+    },
+      {
+      "id": 3,
+      "type": "showing"
+    },
+    {
+      "id": 4,
+      "type": "in person event"
+    },
+      {
+      "id": 5,
+      "type": "circle prospecting"
+    },
+    {
+      "id": 6,
+      "type": "offer"
+    },
+    {
+      "id": 7,
+      "type": "closing"
+    }
+  ],
+
+    "status": [
+        {
+            "id": 1,
+            "type": "active"
+        },
+        {
+            "id": 2,
+            "type": "inactive"
+        }
+    ],
+
+    "agents": [],
+    "leads": [],
+    "services": []
+}
