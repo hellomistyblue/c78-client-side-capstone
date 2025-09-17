@@ -1,5 +1,5 @@
 {
-    "serviceEvent": [
+  "serviceEvents": [
     {
       "id": 1,
       "type": "call"
@@ -8,7 +8,7 @@
       "id": 2,
       "type": "research"
     },
-      {
+    {
       "id": 3,
       "type": "showing"
     },
@@ -16,7 +16,7 @@
       "id": 4,
       "type": "in person event"
     },
-      {
+    {
       "id": 5,
       "type": "circle prospecting"
     },
@@ -29,19 +29,23 @@
       "type": "closing"
     }
   ],
-
-    "status": [
-        {
-            "id": 1,
-            "type": "active"
-        },
-        {
-            "id": 2,
-            "type": "inactive"
-        }
-    ],
-
-    "agents": [],
-    "leads": [],
-    "services": []
+  "status": [
+    {
+      "id": 1,
+      "type": "active"
+    },
+    {
+      "id": 2,
+      "type": "inactive"
+    }
+  ],
+  "agents": [
+    {
+      "email": "nope@nope.com",
+      "fullName": "Jacob Smith",
+      "id": 1
+    }
+  ],
+  "leads": [],
+  "services": []
 }
