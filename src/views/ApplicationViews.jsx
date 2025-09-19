@@ -8,10 +8,10 @@ import { useState, useEffect } from 'react'
 
 
 export const ApplicationViews = () => {
-  const [currentUser, setCurrentUser] = useState(null)
+  const [currentAgent, setCurrentAgent] = useState(null)
 
   useEffect(() => {
-    setCurrentUser(JSON.parse(localStorage.getItem('agent_user')))
+    setCurrentAgent(JSON.parse(localStorage.getItem('agent_user')))
   }, [])
 
   return (
@@ -20,10 +20,25 @@ export const ApplicationViews = () => {
         <Nav />
         <Outlet />
       </>} >
-        <Route index element={<AddALead />} />
+        <Route index element={<AddALead currentAgentId={currentAgent} />} />
         <Route path="/service-leads" element={<ServiceLeads />} />
         <Route path="/inactive-leads" element={<InactiveLeads />} />
       </Route>
     </Routes>
   )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

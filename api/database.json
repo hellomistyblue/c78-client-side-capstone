@@ -43,9 +43,19 @@
     {
       "email": "nope@nope.com",
       "fullName": "Jacob Smith",
+      "id": 3
+    }
+  ],
+  "leads": [
+    {
+      "agentId": 3,
+      "fullName": "Hedy Haynes",
+      "initialTimeSpent": "34",
+      "followUpDate": "1982-12-31",
+      "status": "active",
+      "createdAt": "2025-09-19T15:25:47.553Z",
       "id": 1
     }
   ],
-  "leads": [],
   "services": []
 }
