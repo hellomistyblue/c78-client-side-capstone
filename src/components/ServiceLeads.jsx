@@ -1,6 +1,6 @@
 const ServiceLeads = () => {
     return (
-        <h1>Service Leads</h1>
+        <h1>What are you doing to service your leads today?</h1>
     )
 }
 
