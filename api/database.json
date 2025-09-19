@@ -55,6 +55,15 @@
       "status": "active",
       "createdAt": "2025-09-19T15:25:47.553Z",
       "id": 1
+    },
+    {
+      "agentId": 3,
+      "fullName": "Nicholas Patel",
+      "initialTimeSpent": "61",
+      "followUpDate": "1976-12-26",
+      "status": "active",
+      "createdAt": "2025-09-19T19:15:34.381Z",
+      "id": 2
     }
   ],
   "services": []
