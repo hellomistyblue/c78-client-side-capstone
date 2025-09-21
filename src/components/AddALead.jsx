@@ -7,7 +7,7 @@ const AddALead = ({ currentAgentId }) => {
         fullName: "",
         initialTimeSpent: "",
         followUpDate: "",
-        status: "active",
+        status: 1,
         createdAt: new Date()
     }
     const [lead, setLead] = useState(initialState)
@@ -15,7 +15,7 @@ const AddALead = ({ currentAgentId }) => {
 
         setLead(prevLead => ({
             ...prevLead,
-            status: "active",
+            status: 1,
             agentId: currentAgentId?.id || 0,
 
         }))
