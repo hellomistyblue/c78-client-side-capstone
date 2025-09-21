@@ -52,7 +52,7 @@
       "fullName": "Callie Delaney",
       "initialTimeSpent": "14",
       "followUpDate": "1977-08-06",
-      "status": 2,
+      "status": 1,
       "createdAt": "2025-09-21T18:35:32.209Z",
       "id": 1
     },
@@ -61,7 +61,7 @@
       "fullName": "Cameron Bond",
       "initialTimeSpent": "11",
       "followUpDate": "1995-09-29",
-      "status": 2,
+      "status": 1,
       "createdAt": "2025-09-21T18:37:24.605Z",
       "id": 2
     },
@@ -70,7 +70,7 @@
       "fullName": "Adria Solis",
       "initialTimeSpent": "8",
       "followUpDate": "1990-11-13",
-      "status": 1,
+      "status": 2,
       "createdAt": "2025-09-21T18:37:29.000Z",
       "id": 3
     },
@@ -88,7 +88,7 @@
       "fullName": "Anthony Potter",
       "initialTimeSpent": "70",
       "followUpDate": "2001-06-30",
-      "status": 1,
+      "status": 2,
       "createdAt": "2025-09-21T18:37:33.534Z",
       "id": 5
     },

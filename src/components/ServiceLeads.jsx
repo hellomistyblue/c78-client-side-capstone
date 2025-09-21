@@ -31,10 +31,7 @@ const ServiceLeads = () => {
                     })}
                 </tbody>
             </table>
-
-
         </section>
-
     )
 }
 
