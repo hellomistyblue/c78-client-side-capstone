@@ -24,3 +24,9 @@ export const changeStatus = (leadId, leadData) => {
     body: JSON.stringify(leadData),
   }).then((res) => res.json())
 }
+
+export const getInactiveLeads = () => {
+    return fetch(`http://localhost:8088/leads?status=2`).then((res) =>
+        res.json()
+    );
+};

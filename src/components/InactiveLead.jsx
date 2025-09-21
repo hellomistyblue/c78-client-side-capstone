@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react"
 import { getStatusOptions } from "../services/statusService"
 import { changeStatus } from "../services/leadService"
-import { getActiveLeads } from "../services/leadService"
+import { getInactiveLeads } from "../services/leadService"
 
-const ActiveLead = ({ activeLead, setActiveLeads }) => {
+const InactiveLead = ({ inactiveLead, setInactiveLeads }) => {
 
     const [statusOptions, setStatusOptions] = useState([])
 
     const handleChange = event => {
         const statusId = parseInt(event.target.value)
 
-        changeStatus(activeLead.id, { ...activeLead, status: statusId })
-        getActiveLeads().then((activeLeadArray) => {
-            setActiveLeads(activeLeadArray)
+        changeStatus(inactiveLead.id, { ...inactiveLead, status: statusId })
+        getInactiveLeads().then((inactiveLeadArray) => {
+            setInactiveLeads(inactiveLeadArray)
         })
     }
     useEffect(() => {
@@ -21,16 +21,15 @@ const ActiveLead = ({ activeLead, setActiveLeads }) => {
 
     return (
         <tr>
-            <td>{activeLead.fullName}</td>
-            <td>{activeLead.initialTimeSpent}</td>
-            <td>{activeLead.followUpDate}</td>
+            <td>{inactiveLead.fullName}</td>
+            <td>{inactiveLead.initialTimeSpent}</td>
             <td>
                 <fieldset>
                     <label htmlFor="status">Status</label>
                     <select
                         name="status"
                         id="status"
-                        value={activeLead.status}
+                        value={inactiveLead.status}
                         onChange={handleChange}
                     >
                         {statusOptions.map(statusOption => (
@@ -46,6 +45,6 @@ const ActiveLead = ({ activeLead, setActiveLeads }) => {
 }
 
 
-export default ActiveLead
+export default InactiveLead
 
 
