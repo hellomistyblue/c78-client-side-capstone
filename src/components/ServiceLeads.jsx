@@ -10,20 +10,23 @@ const ServiceLeads = () => {
             setActiveLeads(activeLeadArray)
         })
     }, [])
-    console.log(activeLeads)
     return (
         <section>
             <h1>What are you doing to service your leads today?</h1>
             <table>
                 <thead>
                     <tr>
-                        <th>Lead Name</th><th>Total Time In</th><th>Follow Up On</th>
+                        <th>Lead Name</th><th>Total Time In</th><th>Follow Up On</th><th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     {activeLeads.map((activeLeadObj) => {
                         return (
-                            <ActiveLead activeLead={activeLeadObj} key={activeLeadObj.id} />
+                            <ActiveLead
+                                activeLead={activeLeadObj}
+                                key={activeLeadObj.id}
+                                setActiveLeads={setActiveLeads}
+                            />
                         )
                     })}
                 </tbody>

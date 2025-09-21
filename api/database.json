@@ -49,21 +49,57 @@
   "leads": [
     {
       "agentId": 3,
-      "fullName": "Hedy Haynes",
-      "initialTimeSpent": "34",
-      "followUpDate": "1982-12-31",
-      "status": "active",
-      "createdAt": "2025-09-19T15:25:47.553Z",
+      "fullName": "Callie Delaney",
+      "initialTimeSpent": "14",
+      "followUpDate": "1977-08-06",
+      "status": 2,
+      "createdAt": "2025-09-21T18:35:32.209Z",
       "id": 1
     },
     {
       "agentId": 3,
-      "fullName": "Nicholas Patel",
-      "initialTimeSpent": "61",
-      "followUpDate": "1976-12-26",
-      "status": "active",
-      "createdAt": "2025-09-19T19:15:34.381Z",
+      "fullName": "Cameron Bond",
+      "initialTimeSpent": "11",
+      "followUpDate": "1995-09-29",
+      "status": 2,
+      "createdAt": "2025-09-21T18:37:24.605Z",
       "id": 2
+    },
+    {
+      "agentId": 3,
+      "fullName": "Adria Solis",
+      "initialTimeSpent": "8",
+      "followUpDate": "1990-11-13",
+      "status": 1,
+      "createdAt": "2025-09-21T18:37:29.000Z",
+      "id": 3
+    },
+    {
+      "agentId": 3,
+      "fullName": "Karly Mack",
+      "initialTimeSpent": "35",
+      "followUpDate": "2007-07-25",
+      "status": 2,
+      "createdAt": "2025-09-21T18:37:31.266Z",
+      "id": 4
+    },
+    {
+      "agentId": 3,
+      "fullName": "Anthony Potter",
+      "initialTimeSpent": "70",
+      "followUpDate": "2001-06-30",
+      "status": 1,
+      "createdAt": "2025-09-21T18:37:33.534Z",
+      "id": 5
+    },
+    {
+      "agentId": 3,
+      "fullName": "Basil Tucker",
+      "initialTimeSpent": "77",
+      "followUpDate": "1980-04-02",
+      "status": 1,
+      "createdAt": "2025-09-21T18:37:35.800Z",
+      "id": 6
     }
   ],
   "services": []
