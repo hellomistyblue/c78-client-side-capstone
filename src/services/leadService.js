@@ -30,3 +30,12 @@ export const getInactiveLeads = () => {
         res.json()
     );
 };
+
+export const deleteLead = async (leadId) => {
+    const deleteOptions = {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        },
+    }
+    const response = await fetch(`http://localhost:8088/leads/${leadId}`, deleteOptions)}
