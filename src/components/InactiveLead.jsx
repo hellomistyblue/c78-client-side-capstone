@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { getStatusOptions } from "../services/statusService"
-import { changeStatus } from "../services/leadService"
+import { updateLead } from "../services/leadService"
 import { getInactiveLeads } from "../services/leadService"
 import { deleteLead } from "../services/leadService"
 
@@ -11,7 +11,7 @@ const InactiveLead = ({ inactiveLead, setInactiveLeads }) => {
     const handleChange = event => {
         const statusId = parseInt(event.target.value)
 
-        changeStatus(inactiveLead.id, { ...inactiveLead, status: statusId })
+        updateLead(inactiveLead.id, { ...inactiveLead, status: statusId })
         getInactiveLeads().then((inactiveLeadArray) => {
             setInactiveLeads(inactiveLeadArray)
         })
