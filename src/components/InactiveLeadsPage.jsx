@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import InactiveLead from "./InactiveLead"
 
 
-const InactiveLeads = () => {
+const InactiveLeadsPage = () => {
     const [inactiveLeads, setInactiveLeads] = useState([])
 
     useEffect(() => {
@@ -36,4 +36,4 @@ const InactiveLeads = () => {
     )
 }
 
-export default InactiveLeads
+export default InactiveLeadsPage

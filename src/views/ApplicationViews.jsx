@@ -1,8 +1,8 @@
 import { Route, Routes, Outlet } from "react-router-dom"
 import Nav from "/src/components/Nav"
-import AddALead from "/src/components/AddALead"
-import ServiceLeads from "/src/components/ServiceLeads"
-import InactiveLeads from "/src/components/InactiveLeads"
+import AddALeadPage from "/src/components/AddALeadPage"
+import ServiceLeadsPage from "/src/components/ServiceLeadsPage"
+import InactiveLeadsPage from "/src/components/InactiveLeadsPage"
 import { useState, useEffect } from 'react'
 
 
@@ -20,9 +20,9 @@ export const ApplicationViews = () => {
         <Nav />
         <Outlet />
       </>} >
-        <Route index element={<AddALead currentAgentId={currentAgent} />} />
-        <Route path="/service-leads" element={<ServiceLeads />} />
-        <Route path="/inactive-leads" element={<InactiveLeads />} />
+        <Route index element={<AddALeadPage currentAgentId={currentAgent} />} />
+        <Route path="/service-leads" element={<ServiceLeadsPage currentAgentId={currentAgent}/>} />
+        <Route path="/inactive-leads" element={<InactiveLeadsPage currentAgentId={currentAgent}/>} />
       </Route>
     </Routes>
   )

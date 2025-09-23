@@ -15,7 +15,7 @@ export const getActiveLeads = () => {
     );
 };
 
-export const changeStatus = (leadId, leadData) => {
+export const updateLead = (leadId, leadData) => {
   return fetch(`http://localhost:8088/leads/${leadId}`, {
     method: "PUT",
     headers: {

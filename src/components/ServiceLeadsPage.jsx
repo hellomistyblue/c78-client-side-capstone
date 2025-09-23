@@ -2,8 +2,9 @@ import { getActiveLeads } from "../services/leadService"
 import { useEffect, useState } from "react";
 import ActiveLead from "./ActiveLead";
 
-const ServiceLeads = () => {
+const ServiceLeadsPage = (currentAgentId) => {
     const [activeLeads, setActiveLeads] = useState([])
+    
 
     useEffect(() => {
         getActiveLeads().then((activeLeadArray) => {
@@ -16,7 +17,14 @@ const ServiceLeads = () => {
             <table>
                 <thead>
                     <tr>
-                        <th>Lead Name</th><th>Total Time In</th><th>Follow Up On</th><th>Status</th>
+                        <th>Lead Name</th>
+                        <th>Service</th>
+                        <th>Add Time</th>
+                        <th>Next Follow Up?</th>
+                        <th> </th>
+                        <th>Total Time In</th>
+                        <th>Follow Up On</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,6 +34,7 @@ const ServiceLeads = () => {
                                 activeLead={activeLeadObj}
                                 key={activeLeadObj.id}
                                 setActiveLeads={setActiveLeads}
+                                currentAgentId={currentAgentId}
                             />
                         )
                     })}
@@ -35,6 +44,6 @@ const ServiceLeads = () => {
     )
 }
 
-export default ServiceLeads
+export default ServiceLeadsPage
 
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { createLead } from "../services/leadService.js"
 
-const AddALead = ({ currentAgentId }) => {
+const AddALeadPage = ({ currentAgentId }) => {
     const initialState = {
         agentId: currentAgentId?.id || 0,
         fullName: "",
@@ -114,7 +114,7 @@ const AddALead = ({ currentAgentId }) => {
     )
 }
 
-export default AddALead
+export default AddALeadPage
 
 
 
