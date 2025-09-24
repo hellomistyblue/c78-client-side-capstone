@@ -20,9 +20,9 @@ export const ApplicationViews = () => {
         <Nav />
         <Outlet />
       </>} >
-        <Route index element={<AddALeadPage currentAgentId={currentAgent} />} />
-        <Route path="/service-leads" element={<ServiceLeadsPage currentAgentId={currentAgent}/>} />
-        <Route path="/inactive-leads" element={<InactiveLeadsPage currentAgentId={currentAgent}/>} />
+        <Route index element={<AddALeadPage currentAgentId={currentAgent?.id} />} />
+        <Route path="/service-leads" element={<ServiceLeadsPage currentAgentId={currentAgent?.id} />} />
+        <Route path="/inactive-leads" element={<InactiveLeadsPage currentAgentId={currentAgent?.id} />} />
       </Route>
     </Routes>
   )

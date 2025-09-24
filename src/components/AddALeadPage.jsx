@@ -3,7 +3,7 @@ import { createLead } from "../services/leadService.js"
 
 const AddALeadPage = ({ currentAgentId }) => {
     const initialState = {
-        agentId: currentAgentId?.id || 0,
+        agentId: currentAgentId || 0,
         fullName: "",
         initialTimeSpent: "",
         followUpDate: "",
@@ -16,7 +16,7 @@ const AddALeadPage = ({ currentAgentId }) => {
         setLead(prevLead => ({
             ...prevLead,
             status: 1,
-            agentId: currentAgentId?.id || 0,
+            agentId: currentAgentId || 0,
 
         }))
     }, [currentAgentId])
@@ -33,7 +33,7 @@ const AddALeadPage = ({ currentAgentId }) => {
         if (!lead.followUpDate) {
             missingFields.push("Follow Up Date")
         }
-       
+
         return missingFields
     }
 

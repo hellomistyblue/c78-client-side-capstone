@@ -3,14 +3,14 @@ import { useState, useEffect } from "react"
 import InactiveLead from "./InactiveLead"
 
 
-const InactiveLeadsPage = () => {
+const InactiveLeadsPage = ({ currentAgentId }) => {
     const [inactiveLeads, setInactiveLeads] = useState([])
 
     useEffect(() => {
-        getInactiveLeads().then((inactiveLeadArray) => {
+        getInactiveLeads(currentAgentId).then((inactiveLeadArray) => {
             setInactiveLeads(inactiveLeadArray)
         })
-    }, [])
+    }, [currentAgentId])
     return (
         <section>
             <h1>Inactive Leads</h1>

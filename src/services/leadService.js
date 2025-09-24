@@ -9,8 +9,8 @@ export const createLead = (lead) => {
   }).then((res) => res.json())
 }
 
-export const getActiveLeads = () => {
-    return fetch(`http://localhost:8088/leads?status=1`).then((res) =>
+export const getActiveLeads = (id) => {
+    return fetch(`http://localhost:8088/leads?status=1&agentId=${id}`).then((res) =>
         res.json()
     );
 };
@@ -25,8 +25,8 @@ export const updateLead = (leadId, leadData) => {
   }).then((res) => res.json())
 }
 
-export const getInactiveLeads = () => {
-    return fetch(`http://localhost:8088/leads?status=2`).then((res) =>
+export const getInactiveLeads = (id) => {
+    return fetch(`http://localhost:8088/leads?status=2&agentId=${id}`).then((res) =>
         res.json()
     );
 };

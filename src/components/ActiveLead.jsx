@@ -16,7 +16,7 @@ const ActiveLead = ({ activeLead, setActiveLeads, currentAgentId }) => {
         const statusId = parseInt(event.target.value)
 
         await updateLead(activeLead.id, { ...activeLead, status: statusId })
-        const activeLeadArray = await getActiveLeads()
+        const activeLeadArray = await getActiveLeads(currentAgentId)
         setActiveLeads(activeLeadArray)
     }
     const handleServiceChange = event => {
@@ -34,7 +34,7 @@ const ActiveLead = ({ activeLead, setActiveLeads, currentAgentId }) => {
 
     }, [setStatusOptions, setServiceEvents])
 
-    const handleClick = async (event) => {
+    const handleClick = async () => {
         const missingFields = validateForm()
         if (missingFields.length > 0) {
             const fieldList = missingFields.join(", ")
@@ -42,7 +42,7 @@ const ActiveLead = ({ activeLead, setActiveLeads, currentAgentId }) => {
             return
         }
         const services = {
-            agentId: currentAgentId?.id || 0,
+            agentId: currentAgentId || 0,
             leadId: activeLead.id,
             type: selectedService,
             timeSpent: addedTime
@@ -53,7 +53,7 @@ const ActiveLead = ({ activeLead, setActiveLeads, currentAgentId }) => {
         ])
 
 
-        const activeLeadArray = await getActiveLeads()
+        const activeLeadArray = await getActiveLeads(currentAgentId)
         setActiveLeads(activeLeadArray)
 
         setSelectedService(0)
