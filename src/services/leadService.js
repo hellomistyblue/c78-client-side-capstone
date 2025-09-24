@@ -38,4 +38,12 @@ export const deleteLead = async (leadId) => {
             "Content-Type": "application/json"
         },
     }
-    const response = await fetch(`http://localhost:8088/leads/${leadId}`, deleteOptions)}
+    const response = await fetch(`http://localhost:8088/leads/${leadId}`, deleteOptions)};
+
+
+export const getLeadsById = (id) => {
+  return fetch(`http://localhost:8088/leads?id=${id}`).then((res) =>
+        res.json()
+    );
+}
+

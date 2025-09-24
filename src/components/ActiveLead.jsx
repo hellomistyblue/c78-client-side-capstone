@@ -3,6 +3,7 @@ import { getStatusOptions } from "../services/statusService"
 import { updateLead } from "../services/leadService"
 import { getActiveLeads } from "../services/leadService"
 import { getServiceEvents, createServiceData } from "../services/servicesService"
+import TotalTime from "./TotalTime"
 
 
 const ActiveLead = ({ activeLead, setActiveLeads, currentAgentId }) => {
@@ -117,7 +118,11 @@ const ActiveLead = ({ activeLead, setActiveLeads, currentAgentId }) => {
                 placeholder="Follow Up On?" />
             </td>
             <td><button onClick={handleClick}>Save</button></td>
-            <td>{activeLead.initialTimeSpent}</td>
+            <td>
+                <TotalTime 
+                    leadId={activeLead.id}
+                />
+            </td> 
             <td>{activeLead.followUpDate}</td>
             <td>{activeLead.status.type}</td>
             <td>

@@ -51,7 +51,7 @@
       "agentId": 3,
       "fullName": "Bertha Frank",
       "initialTimeSpent": "30",
-      "followUpDate": "2025-09-24",
+      "followUpDate": "2025-09-26",
       "status": 1,
       "createdAt": "2025-09-24T00:18:37.942Z",
       "id": 1
@@ -69,7 +69,7 @@
       "agentId": 3,
       "fullName": "Rinah Dominguez",
       "initialTimeSpent": "8",
-      "followUpDate": "1971-02-23",
+      "followUpDate": "2025-09-29",
       "status": 1,
       "createdAt": "2025-09-24T02:07:47.343Z",
       "id": 3
@@ -82,6 +82,20 @@
       "type": 1,
       "timeSpent": 4,
       "id": 1
+    },
+    {
+      "agentId": 3,
+      "leadId": 1,
+      "type": 3,
+      "timeSpent": 22,
+      "id": 2
+    },
+    {
+      "agentId": 3,
+      "leadId": 3,
+      "type": 5,
+      "timeSpent": 35,
+      "id": 3
     }
   ]
 }

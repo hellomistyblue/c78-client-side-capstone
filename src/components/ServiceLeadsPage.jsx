@@ -22,8 +22,9 @@ const ServiceLeadsPage = ({ currentAgentId }) => {
                         <th>Add Time</th>
                         <th>Next Follow Up?</th>
                         <th> </th>
-                        <th>Total Time In</th>
+                        <th>Total Time</th>
                         <th>Follow Up On</th>
+                        <th> </th>                       
                         <th>Status</th>
                     </tr>
                 </thead>
