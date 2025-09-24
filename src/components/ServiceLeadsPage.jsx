@@ -2,15 +2,15 @@ import { getActiveLeads } from "../services/leadService"
 import { useEffect, useState } from "react";
 import ActiveLead from "./ActiveLead";
 
-const ServiceLeadsPage = (currentAgentId) => {
+const ServiceLeadsPage = ({ currentAgentId }) => {
     const [activeLeads, setActiveLeads] = useState([])
-    
+
 
     useEffect(() => {
-        getActiveLeads().then((activeLeadArray) => {
+        getActiveLeads(currentAgentId).then((activeLeadArray) => {
             setActiveLeads(activeLeadArray)
         })
-    }, [])
+    }, [currentAgentId])
     return (
         <section>
             <h1>What are you doing to service your leads today?</h1>
