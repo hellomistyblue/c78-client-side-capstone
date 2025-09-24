@@ -3,6 +3,7 @@ import { getStatusOptions } from "../services/statusService"
 import { updateLead } from "../services/leadService"
 import { getInactiveLeads } from "../services/leadService"
 import { deleteLead } from "../services/leadService"
+import TotalTime from "./TotalTime"
 
 const InactiveLead = ({ inactiveLead, setInactiveLeads }) => {
 
@@ -32,7 +33,11 @@ const InactiveLead = ({ inactiveLead, setInactiveLeads }) => {
     return (
         <tr>
             <td>{inactiveLead.fullName}</td>
-            <td>{inactiveLead.initialTimeSpent}</td>
+            <td>
+                <TotalTime 
+                    leadId={inactiveLead.id}
+                />
+            </td> 
             <td>
                 <fieldset>
                     <label htmlFor="status">Status</label>

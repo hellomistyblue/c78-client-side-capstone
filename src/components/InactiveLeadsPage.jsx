@@ -17,7 +17,7 @@ const InactiveLeadsPage = ({ currentAgentId }) => {
             <table>
                 <thead>
                     <tr>
-                        <th>Lead Name</th><th>Initial Time In</th><th>Status</th>
+                        <th>Lead Name</th><th>Total Time</th><th>Status</th>
                     </tr>
                 </thead>
                 <tbody>

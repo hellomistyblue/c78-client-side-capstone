@@ -13,6 +13,11 @@ export const createServiceData = (serviceData) => {
     },
     body: JSON.stringify(serviceData),
   }).then((res) => res.json())
-}
+};
 
+export const getServicesByLeadId = (leadId) => {
+  return fetch(`http://localhost:8088/services?leadId=${leadId}`).then((res) =>
+        res.json()
+    );
+}
 
