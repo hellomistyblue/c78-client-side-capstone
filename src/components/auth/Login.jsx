@@ -5,11 +5,11 @@ import "./Login.css"
 import { getUserByEmail } from "../../services/userService"
 
 export const Login = () => {
-  const [email, set] = useState("nope@nope.com")
+  const [email, set] = useState("")
   const navigate = useNavigate()
 
-  const handleLogin = (event) => {
-    event.preventDefault()
+  const handleLogin = (e) => {
+    e.preventDefault()
 
     getUserByEmail(email).then((foundUsers) => {
       if (foundUsers.length === 1) {
@@ -39,7 +39,7 @@ export const Login = () => {
               <input
                 type="email"
                 value={email}
-                onChange={(event) => set(event.target.value)}
+                onChange={(evt) => set(evt.target.value)}
                 className="form-control"
                 placeholder="Email address"
                 required
