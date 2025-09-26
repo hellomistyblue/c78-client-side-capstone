@@ -17,6 +17,7 @@ const ActiveLead = ({ activeLead, setActiveLeads, currentAgentId }) => {
         const statusId = parseInt(event.target.value)
 
         await updateLead(activeLead.id, { ...activeLead, status: statusId })
+
         const activeLeadArray = await getActiveLeads(currentAgentId)
         setActiveLeads(activeLeadArray)
     }
@@ -53,7 +54,6 @@ const ActiveLead = ({ activeLead, setActiveLeads, currentAgentId }) => {
             updateLead(activeLead.id, { ...activeLead, followUpDate: nextFollowUp })
         ])
 
-
         const activeLeadArray = await getActiveLeads(currentAgentId)
         setActiveLeads(activeLeadArray)
 
@@ -64,7 +64,6 @@ const ActiveLead = ({ activeLead, setActiveLeads, currentAgentId }) => {
 
     const validateForm = () => {
         const missingFields = []
-        console.log(selectedService, selectedService === 0)
         if (selectedService === 0) {
             missingFields.push("Service")
         }
@@ -77,16 +76,10 @@ const ActiveLead = ({ activeLead, setActiveLeads, currentAgentId }) => {
         return missingFields
     }
 
-
-
-
-
-
-
     return (
         <tr>
-            <td>{activeLead.fullName}</td>
-            <td>
+            <td data-label="Full Name">{activeLead.fullName}</td>
+            <td data-label="Choose Service">
                 <select
                     name="service"
                     id="service"
@@ -103,14 +96,14 @@ const ActiveLead = ({ activeLead, setActiveLeads, currentAgentId }) => {
                     ))}
                 </select>
             </td>
-            <td>
+            <td data-label="Time Spent Today">
                 <input
                     id="addTime"
                     type="number"
                     value={addedTime}
                     onChange={handleAddedTime} />
             </td>
-            <td><input
+            <td data-label="Next Follow Up?"><input
                 id="nextFollowUp"
                 type="date"
                 value={nextFollowUp}
@@ -118,16 +111,23 @@ const ActiveLead = ({ activeLead, setActiveLeads, currentAgentId }) => {
                 placeholder="Follow Up On?" />
             </td>
             <td><button onClick={handleClick}>Save</button></td>
-            <td>
-                <TotalTime 
+            <td data-label="Total Time Spent">
+                <TotalTime
                     leadId={activeLead.id}
+                    key={`${activeLead.id}-${selectedService}`}
                 />
-            </td> 
-            <td>{activeLead.followUpDate}</td>
-            <td>{activeLead.status.type}</td>
-            <td>
-                <fieldset>
-                    <label htmlFor="status">Status</label>
+            </td>
+            <td data-label="Follow Up On">
+                {activeLead.followUpDate &&
+                    (() => {
+                        const [year, month, day] = activeLead.followUpDate.split('-');
+                        return `${month}/${day}/${year}`;
+                    })()
+                }
+            </td>
+            <td data-label="Status">
+                <fieldset className="status-input">
+                    <label className="sr-only" htmlFor="status">Status</label>
                     <select
                         name="status"
                         id="status"
@@ -145,7 +145,6 @@ const ActiveLead = ({ activeLead, setActiveLeads, currentAgentId }) => {
         </tr >
     )
 }
-
 
 export default ActiveLead
 

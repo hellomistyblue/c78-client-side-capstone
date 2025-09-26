@@ -17,7 +17,7 @@ const InactiveLeadsPage = ({ currentAgentId }) => {
             <table>
                 <thead>
                     <tr>
-                        <th>Lead Name</th><th>Total Time</th><th>Status</th>
+                        <th>Lead Name</th><th>Total Time</th><th>Status</th><th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,6 +27,7 @@ const InactiveLeadsPage = ({ currentAgentId }) => {
                                 inactiveLead={inactiveLeadObj}
                                 key={inactiveLeadObj.id}
                                 setInactiveLeads={setInactiveLeads}
+                                currentAgentId={currentAgentId}
                             />
                         )
                     })}

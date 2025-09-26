@@ -5,7 +5,6 @@ import ActiveLead from "./ActiveLead";
 const ServiceLeadsPage = ({ currentAgentId }) => {
     const [activeLeads, setActiveLeads] = useState([])
 
-
     useEffect(() => {
         getActiveLeads(currentAgentId).then((activeLeadArray) => {
             setActiveLeads(activeLeadArray)
@@ -23,8 +22,7 @@ const ServiceLeadsPage = ({ currentAgentId }) => {
                         <th>Next Follow Up?</th>
                         <th> </th>
                         <th>Total Time</th>
-                        <th>Follow Up On</th>
-                        <th> </th>                       
+                        <th>Follow Up On</th>                    
                         <th>Status</th>
                     </tr>
                 </thead>
