@@ -54,6 +54,11 @@
       "email": "user@user.com",
       "fullName": "Marigold Cash",
       "id": 5
+    },
+    {
+      "email": "test@test.com",
+      "fullName": "Test User",
+      "id": 6
     }
   ],
   "leads": [
@@ -125,7 +130,7 @@
       "fullName": "Maggie Workman",
       "initialTimeSpent": "11",
       "followUpDate": "2025-12-01",
-      "status": 1,
+      "status": 2,
       "createdAt": "2025-09-25T19:55:17.778Z",
       "id": 13
     },
@@ -251,9 +256,63 @@
       "fullName": "Quincy Valentine",
       "initialTimeSpent": "12",
       "followUpDate": "2025-09-25",
-      "status": 1,
+      "status": 2,
       "createdAt": "2025-09-26T03:30:26.883Z",
       "id": 32
+    },
+    {
+      "agentId": 3,
+      "fullName": "Kathleen Howard",
+      "initialTimeSpent": "47",
+      "followUpDate": "2025-09-26",
+      "status": 1,
+      "createdAt": "2025-09-26T14:00:10.005Z",
+      "id": 33
+    },
+    {
+      "agentId": 3,
+      "fullName": "Boris Chang",
+      "initialTimeSpent": "93",
+      "followUpDate": "2025-09-26",
+      "status": 1,
+      "createdAt": "2025-09-26T14:35:14.161Z",
+      "id": 34
+    },
+    {
+      "agentId": 6,
+      "fullName": "Alana Salas",
+      "initialTimeSpent": "14",
+      "followUpDate": "2025-10-03",
+      "status": 2,
+      "createdAt": "2025-09-26T15:56:22.319Z",
+      "id": 35
+    },
+    {
+      "agentId": 6,
+      "fullName": "Yvonne Cameron",
+      "initialTimeSpent": "60",
+      "followUpDate": "2025-09-26",
+      "status": 1,
+      "createdAt": "2025-09-26T16:07:25.866Z",
+      "id": 36
+    },
+    {
+      "agentId": 6,
+      "fullName": "Rudyard May",
+      "initialTimeSpent": "45",
+      "followUpDate": "2025-09-26",
+      "status": 1,
+      "createdAt": "2025-09-26T16:07:34.732Z",
+      "id": 37
+    },
+    {
+      "agentId": 6,
+      "fullName": "Oren Mcclain",
+      "initialTimeSpent": "70",
+      "followUpDate": "2025-09-26",
+      "status": 1,
+      "createdAt": "2025-09-26T16:07:42.755Z",
+      "id": 38
     }
   ],
   "services": [
@@ -417,6 +476,27 @@
       "type": 4,
       "timeSpent": 3,
       "id": 27
+    },
+    {
+      "agentId": 6,
+      "leadId": 35,
+      "type": 2,
+      "timeSpent": 1,
+      "id": 28
+    },
+    {
+      "agentId": 6,
+      "leadId": 35,
+      "type": 3,
+      "timeSpent": 5,
+      "id": 29
+    },
+    {
+      "agentId": 6,
+      "leadId": 36,
+      "type": 2,
+      "timeSpent": 1,
+      "id": 30
     }
   ]
 }

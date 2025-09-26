@@ -25,7 +25,8 @@ const ActiveLead = ({ activeLead, setActiveLeads, currentAgentId }) => {
         setSelectedService(parseInt(event.target.value))
     }
     const handleAddedTime = event => {
-        setAddedTime(parseInt(event.target.value))
+        const timeValue = (event.target.value)
+        setAddedTime(timeValue === "" ? 0 : parseInt(timeValue))
     }
     const handleNextFollowUp = event => {
         setNextFollowUp(event.target.value)
