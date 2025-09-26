@@ -6,18 +6,20 @@ const Nav = () => {
     const navigate = useNavigate()
 
     return (
-        <ul className="nav">
-            <li className="nav-item">
-                <Link to='/'>Add A Lead</Link>
-            </li>
-            <li className="nav-item">
-                <Link to="/service-leads">Service Leads</Link>
-            </li>
-            <li className="nav-item">
-                <Link to="/inactive-leads">Inactive Leads</Link>
-            </li>
+        <nav>
+            <ul className="nav">
+                <li className="nav-item">
+                    <Link to='/'>Add Lead</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/service-leads">Service Leads</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/inactive-leads">Inactive Leads</Link>
+                </li>
+            </ul>
             {localStorage.getItem("agent_user") ? (
-                <li className="nav-item nav-logout">
+                <div className="nav-item nav-logout">
                     <Link
                         className="nav-link"
                         to=""
@@ -28,11 +30,11 @@ const Nav = () => {
                     >
                         Logout
                     </Link>
-                </li>
+                </div>
             ) : (
                 ""
             )}
-        </ul>
+        </nav>
     )
 }
 

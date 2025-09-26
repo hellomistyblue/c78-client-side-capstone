@@ -1,21 +1,7 @@
 #root {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes logo-spin {
@@ -39,4 +25,188 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/************* Custom Styles *************/
+
+.nav-item {
+  font-size: 14px;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #eba832;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #247463;
+  padding: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: #f4f4f4;
+}
+
+/* Stacked layout on small screens */
+@media screen and (max-width: 1100px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none; /* Hide the main header row */
+  }
+  tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fff;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: center;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  td:last-child {
+    border-bottom: none;
+  }
+}
+
+tr {
+  background-color: #ffffff;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Enables horizontal scroll on small screens */
+  -webkit-overflow-scrolling: touch;
+}
+
+label {
+  display: block;
+}
+@media screen and (min-width: 400px) {
+  fieldset {
+    display: flex;
+    gap: 8px;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+#addTime {
+  width: 60px;
+}
+
+main {
+  padding: 0 20px 20px 20px;
+}
+
+.delete {
+  background-color: rgb(221, 6, 6);
+}
+
+input, select {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0;
+  color: #213147;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-add-lead {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-add-lead input {
+  flex-grow: 1;
+}
+
+input[type="number"]::placeholder {
+  color: #213147;
+  opacity: 0.95;
+}
+
+/* Also add webkit prefix for better support */
+input[type="number"]::-webkit-input-placeholder {
+  color: #213147;
+  opacity: 0.95;
+}
+
+::placeholder {
+  color: #213147;
+  opacity: 0.5;
+}
+
+.status-input {
+  justify-content: center;
 }

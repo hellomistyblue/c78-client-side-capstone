@@ -4,6 +4,7 @@ import { getServicesByLeadId } from "../services/servicesService"
 
 const TotalTime = ({ leadId }) => {
     const [totalTime, setTotalTime] = useState(0)
+    
 
     useEffect(() => {
         const calculateTime = async () => {

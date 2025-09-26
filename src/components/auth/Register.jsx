@@ -25,8 +25,8 @@ export const Register = () => {
     })
   }
 
-  const handleRegister = (e) => {
-    e.preventDefault()
+  const handleRegister = (event) => {
+    event.preventDefault()
     getUserByEmail(customer.email).then((response) => {
       if (response.length > 0) {
         // Duplicate email. No good.
@@ -38,9 +38,9 @@ export const Register = () => {
     })
   }
 
-  const updateCustomer = (evt) => {
+  const updateCustomer = (event) => {
     const copy = { ...customer }
-    copy[evt.target.id] = evt.target.value
+    copy[event.target.id] = event.target.value
     setCustomer(copy)
   }
 

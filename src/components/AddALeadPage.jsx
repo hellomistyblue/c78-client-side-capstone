@@ -76,40 +76,41 @@ const AddALeadPage = ({ currentAgentId }) => {
     return (
         <div>
             <h1>Who are you adding to your lead list today?</h1>
-            <form>
-                <fieldset>
-                    <label htmlFor="fullName">Full Name</label>
-                    <input
-                        id="fullName"
-                        type="text"
-                        value={lead.fullName}
-                        onChange={handleFullNameChange}
-                        placeholder="Enter full name"
-                    />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="initialTimeSpent">Time Spent</label>
-                    <input
-                        id="initialTimeSpent"
-                        type="number"
-                        value={lead.initialTimeSpent}
-                        onChange={handleInitialTimeSpentChange}
-                        placeholder="Enter Initial Time Spent"
-                    />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="followUpDate">Follow Up On?</label>
-                    <input
-                        id="followUpDate"
-                        type="date"
-                        value={lead.followUpDate}
-                        onChange={handleFollowUpDateChange}
-                        placeholder="Follow Up On?"
-                    />
-                </fieldset>
-                <button onClick={handleClick}>Add Lead</button>
-            </form>
-            <p>Current lead: {JSON.stringify(lead, null, 2)}</p>
+            <section className="form-container">
+                <form className="form-add-lead">
+                    <fieldset>
+                        <label htmlFor="fullName">Full Name</label>
+                        <input
+                            id="fullName"
+                            type="text"
+                            value={lead.fullName}
+                            onChange={handleFullNameChange}
+                            placeholder="Enter full name"
+                        />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="initialTimeSpent">Time Spent</label>
+                        <input
+                            id="initialTimeSpent"
+                            type="number"
+                            value={lead.initialTimeSpent}
+                            onChange={handleInitialTimeSpentChange}
+                            placeholder="Enter Initial Time Spent"
+                        />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="followUpDate">Follow Up On?</label>
+                        <input
+                            id="followUpDate"
+                            type="date"
+                            value={lead.followUpDate}
+                            onChange={handleFollowUpDateChange}
+                            placeholder="Follow Up On?"
+                        />
+                    </fieldset>
+                    <button onClick={handleClick}>Add Lead</button>
+                </form>
+            </section>
         </div>
     )
 }

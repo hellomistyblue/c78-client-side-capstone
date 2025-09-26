@@ -8,8 +8,8 @@ export const Login = () => {
   const [email, set] = useState("nope@nope.com")
   const navigate = useNavigate()
 
-  const handleLogin = (e) => {
-    e.preventDefault()
+  const handleLogin = (event) => {
+    event.preventDefault()
 
     getUserByEmail(email).then((foundUsers) => {
       if (foundUsers.length === 1) {
@@ -39,7 +39,7 @@ export const Login = () => {
               <input
                 type="email"
                 value={email}
-                onChange={(evt) => set(evt.target.value)}
+                onChange={(event) => set(event.target.value)}
                 className="form-control"
                 placeholder="Email address"
                 required
