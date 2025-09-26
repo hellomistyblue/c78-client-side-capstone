@@ -31,14 +31,14 @@ const InactiveLead = ({ inactiveLead, setInactiveLeads, currentAgentId }) => {
 
     return (
         <tr>
-            <td>{inactiveLead.fullName}</td>
-            <td>
+            <td data-label="Full Name">{inactiveLead.fullName}</td>
+            <td data-label="Total Time">
                 <TotalTime 
                     leadId={inactiveLead.id}
                 />
             </td> 
-            <td>
-                <fieldset>
+            <td data-label="Status">
+                <fieldset className="status-input">
                     <label className="sr-only" htmlFor="status">Status</label>
                     <select
                         name="status"
@@ -54,7 +54,7 @@ const InactiveLead = ({ inactiveLead, setInactiveLeads, currentAgentId }) => {
                     </select>
                 </fieldset>
             </td >
-            <td>
+            <td data-label="Delete">
                 <button className="delete"
                     onClick={handleClick}
                 ><svg width="30" height="27" viewBox="0 0 1524 1400" fill="none" xmlns="http://www.w3.org/2000/svg">

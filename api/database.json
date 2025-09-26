@@ -59,6 +59,16 @@
       "email": "test@test.com",
       "fullName": "Test User",
       "id": 6
+    },
+    {
+      "email": "medutob@mailinator.com",
+      "fullName": "Carson Graves",
+      "id": 7
+    },
+    {
+      "email": "byre@mailinator.com",
+      "fullName": "Roary Bright",
+      "id": 8
     }
   ],
   "leads": [
@@ -313,6 +323,69 @@
       "status": 1,
       "createdAt": "2025-09-26T16:07:42.755Z",
       "id": 38
+    },
+    {
+      "agentId": 7,
+      "fullName": "Jermaine Baker",
+      "initialTimeSpent": "11",
+      "followUpDate": "2025-09-26",
+      "status": 1,
+      "createdAt": "2025-09-26T17:36:18.601Z",
+      "id": 40
+    },
+    {
+      "agentId": 7,
+      "fullName": "Jana Miller",
+      "initialTimeSpent": "18",
+      "followUpDate": "2007-09-15",
+      "status": 1,
+      "createdAt": "2025-09-26T17:40:01.510Z",
+      "id": 41
+    },
+    {
+      "agentId": 8,
+      "fullName": "Fatima Burke",
+      "initialTimeSpent": "31",
+      "followUpDate": "2025-09-26",
+      "status": 1,
+      "createdAt": "2025-09-26T17:42:10.872Z",
+      "id": 42
+    },
+    {
+      "agentId": 8,
+      "fullName": "Brett Pittman",
+      "initialTimeSpent": "1",
+      "followUpDate": "2025-09-26",
+      "status": 2,
+      "createdAt": "2025-09-26T17:42:18.971Z",
+      "id": 44
+    },
+    {
+      "agentId": 8,
+      "fullName": "Nicole Bradford",
+      "initialTimeSpent": "31",
+      "followUpDate": "2020-04-11",
+      "status": 2,
+      "createdAt": "2025-09-26T17:42:21.436Z",
+      "id": 45
+    },
+    {
+      "agentId": 8,
+      "fullName": "Clarke Caldwell",
+      "initialTimeSpent": "86",
+      "followUpDate": "2003-11-02",
+      "status": 1,
+      "createdAt": "2025-09-26T17:42:24.191Z",
+      "id": 46
+    },
+    {
+      "agentId": 8,
+      "fullName": "Daryl Atkinson",
+      "initialTimeSpent": "66",
+      "followUpDate": "2023-06-25",
+      "status": 1,
+      "createdAt": "2025-09-26T17:42:46.654Z",
+      "id": 47
     }
   ],
   "services": [
@@ -497,6 +570,20 @@
       "type": 2,
       "timeSpent": 1,
       "id": 30
+    },
+    {
+      "agentId": 8,
+      "leadId": 42,
+      "type": 3,
+      "timeSpent": 5,
+      "id": 31
+    },
+    {
+      "agentId": 8,
+      "leadId": 44,
+      "type": 4,
+      "timeSpent": 17,
+      "id": 34
     }
   ]
 }
